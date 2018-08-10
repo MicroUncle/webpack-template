@@ -46,9 +46,8 @@ module.exports =  {
         new copyWebpackPlugin([
             {
                 from: './assets/',
-                to: './assets/'
+                to: './static/'
             }
         ])
-        
     ]
 }
