@@ -19,7 +19,7 @@ module.exports =  {
                 test: /\.(less)$/,
                 use: [
                     {
-                        loader: 'style'
+                        loader: 'style-loader'
                     },
                     {
                         loader: 'less-loader'
@@ -27,13 +27,13 @@ module.exports =  {
                 ]
             },
             {
-                test: /\.(scss)$/,
+                test: /\.(scss|sass)$/,
                 use: [
                     {
-                        loader: 'style'
+                        loader: 'style-loader'
                     },
                     {
-                        loader: 'scss-loader'
+                        loader: 'sass-loader'
                     }
                 ]
             },
@@ -41,6 +41,10 @@ module.exports =  {
                 test: /\.(html)$/,
                 loader: 'html-loader'
             },
+            {
+				test: /\.json$/,
+				loader: 'json-loader'
+			},
             {
                 test: /\.(png|jpg|jpeg|svg|gif)$/,
                 loader: 'url-loader',

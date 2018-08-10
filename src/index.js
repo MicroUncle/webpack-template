@@ -1,0 +1,1 @@
+const style = require('./assets/style/index.less')
