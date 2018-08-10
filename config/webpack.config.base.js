@@ -17,11 +17,29 @@ module.exports =  {
             },
             {
                 test: /\.(less)$/,
-                loader: 'less-loader'
+                use: [
+                    {
+                        loader: 'style'
+                    },
+                    {
+                        loader: 'less-loader'
+                    }
+                ]
             },
             {
                 test: /\.(scss)$/,
-                loader: 'scss-loader'
+                use: [
+                    {
+                        loader: 'style'
+                    },
+                    {
+                        loader: 'scss-loader'
+                    }
+                ]
+            },
+            {
+                test: /\.(html)$/,
+                loader: 'html-loader'
             },
             {
                 test: /\.(png|jpg|jpeg|svg|gif)$/,
