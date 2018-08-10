@@ -1,0 +1,33 @@
+{
+  "name": "webpack-template",
+  "version": "1.0.0",
+  "description": "自用webpack配置模板",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-env": "^2.4.1",
+    "babel-loader": "^7.1.5",
+    "copy-webpack-plugin": "^4.5.2",
+    "html-webpack-plugin": "^3.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --env=dev",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MicroUncle/webpack-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MicroUncle/webpack-template/issues"
+  },
+  "homepage": "https://github.com/MicroUncle/webpack-template#readme"
+}
