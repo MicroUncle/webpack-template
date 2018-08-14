@@ -17,25 +17,11 @@ module.exports =  {
             },
             {
                 test: /\.(less)$/,
-                use: [
-                    {
-                        loader: 'style-loader'
-                    },
-                    {
-                        loader: 'less-loader'
-                    }
-                ]
+                loader: 'style-loader!css-loader!less-loader'
             },
             {
                 test: /\.(scss|sass)$/,
-                use: [
-                    {
-                        loader: 'style-loader'
-                    },
-                    {
-                        loader: 'sass-loader'
-                    }
-                ]
+                loader: 'style-loader!css-loader!sass-loader'
             },
             {
                 test: /\.(html)$/,
@@ -58,6 +44,7 @@ module.exports =  {
     devServer: {
         port: 8080,
         hot: true,
+        open: true,
         contentBase: path.resolve(__dirname, '../dist/')
     },
     plugins: [
@@ -68,7 +55,7 @@ module.exports =  {
         new copyWebpackPlugin([
             {
                 from: './assets/',
-                to: './static/'
+                to: './assets/'
             }
         ])
     ]
