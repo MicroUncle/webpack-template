@@ -16,11 +16,11 @@ module.exports =  {
                 loader: 'babel-loader'
             },
             {
-                test: /\.(less)$/,
+                test: /\.(css|less)$/,
                 loader: 'style-loader!css-loader!less-loader'
             },
             {
-                test: /\.(scss|sass)$/,
+                test: /\.(css|scss|sass)$/,
                 loader: 'style-loader!css-loader!sass-loader'
             },
             {
@@ -54,8 +54,8 @@ module.exports =  {
         }),
         new copyWebpackPlugin([
             {
-                from: './assets/',
-                to: './assets/'
+                from: './assets/img',
+                to: './assets/img'
             }
         ])
     ]
