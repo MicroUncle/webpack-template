@@ -35,8 +35,9 @@ module.exports =  {
                 test: /\.(png|jpg|jpeg|svg|gif)$/,
                 loader: 'url-loader',
                 options: {
-                    name: './img/[name]-[hash].[ext]',
-                    limit: 80960000
+                    limit: 8092,
+                    fallback: 'file-loader', // 传递参数到下一个loader 大坑 不然file-loader拿不到name参数
+                    name: 'img/[name]-[hash:7].[ext]'
                 }
             }  
         ]
