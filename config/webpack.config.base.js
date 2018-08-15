@@ -35,8 +35,8 @@ module.exports =  {
                 test: /\.(png|jpg|jpeg|svg|gif)$/,
                 loader: 'url-loader',
                 options: {
-                  name:'img/[name].[ext]',
-                  limit:8190
+                    name: './img/[name]-[hash].[ext]',
+                    limit: 80960000
                 }
             }  
         ]
@@ -52,11 +52,11 @@ module.exports =  {
             template: `html-withimg-loader!${path.resolve(__dirname, '../src/template/index.html')}`,
             filename: 'index.html'
         }),
-        new copyWebpackPlugin([
-            {
-                from: './assets/img',
-                to: './assets/img'
-            }
-        ])
+        // new copyWebpackPlugin([
+        //     {
+        //         from: './assets/img',
+        //         to: './assets/img'
+        //     }
+        // ])
     ]
 }
