@@ -49,7 +49,7 @@ module.exports =  {
     },
     plugins: [
         new htmlWebpackPlugin({
-            template: './template/index.html',
+            template: 'html-withimg-loader!./template/index.html',
             filename: 'index.html'
         }),
         new copyWebpackPlugin([
